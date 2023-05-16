@@ -1,0 +1,83 @@
+<div class="grid">
+    <div class="col-12">
+        <div class="card">
+            <!--<div class="my-2">
+                <button class="btn btn-outline-success opacity-75 btn-lg mx-3">Insertar</button>
+                <button class="btn btn-outline-danger opacity-75 btn-lg mx-3">Borrar</button>
+                <button class="btn btn-outline-secondary opacity-75 btn-lg mx-3">Editar</button>
+            </div>
+            <table class="table table-success table-striped table-bordered table-hover shadow-sm">
+                <thead>
+                  <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Comentario</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Barranquilla</td>
+                    <td>Sede principal</td>
+                  </tr>
+
+                </tbody>
+              </table>-->
+              <div class="grid">
+                <div class="col-12">
+                        <div class="my-2 mb-3">
+                            <button pButton pRipple label="Agregar" icon="pi pi-plus" class="p-button-success mr-2" (click)="openNew()"></button>
+                            <button pButton pRipple label="Eliminar" icon="pi pi-trash" class="p-button-danger" (click)="deleteSelectedProducts()" [disabled]="!selectedProducts || !selectedProducts.length"></button>
+                        </div>
+                        <p-table #dt [value]="products" [columns]="cols" responsiveLayout="scroll" [rows]="10" [globalFilterFields]="['name','country.name','representative.name','status']" [paginator]="true" [rowsPerPageOptions]="[10,20,30]" [showCurrentPageReport]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [(selection)]="selectedProducts" selectionMode="multiple" [rowHover]="true" dataKey="id">
+                            <ng-template pTemplate="caption">
+                                <div class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
+                                    <h5 class="m-0">Ciudades</h5>
+                                   <!-- <span class="block mt-2 md:mt-0 p-input-icon-left">
+                                        <i class="pi pi-search"></i>
+                                       <input type="text" pInputText (input)="onGlobalFilter(dt, $event)" placeholder="Search..."/>
+                                    </span>-->
+                                </div>
+                            </ng-template>
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th style="width: 3rem">
+                                        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                                    </th>
+                                    <th pSortableColumn="codigo">Codigo <p-sortIcon field="code"></p-sortIcon></th>
+                                    <th pSortableColumn="descripcion">Descripcion <p-sortIcon field="name"></p-sortIcon></th>
+                                    <th pSortableColumn="comentario">Comentario <p-sortIcon field="price"></p-sortIcon></th>
+                                    <th></th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-product>
+                                <tr>
+                                    <td>
+                                        <p-tableCheckbox [value]="product"></p-tableCheckbox>
+                                    </td>
+                                    <td style="width:14%; min-width:10rem;"><span class="p-column-title">Code</span>
+                                        {{product.code || product.id}}
+                                    </td>
+                                    <td style="width:14%; min-width:10rem;">
+                                        <span class="p-column-title">Name</span>
+                                        {{product.name}}
+                                    </td>
+                                    <td style="width:14%; min-width:10rem;">
+                                        <span class="p-column-title">Category</span>
+                                        {{product.category}}
+                                    </td>
+                                    <td>
+                                        <div class="flex">
+                                            <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" (click)="editProduct(product)"></button>
+                                            <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteProduct(product)"></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
