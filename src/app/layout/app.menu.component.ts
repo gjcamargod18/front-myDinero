@@ -26,65 +26,65 @@ export class AppMenuComponent implements OnInit {
                                 items: [
                                     {
                                         label: 'Barrios',
-        
+
                                         routerLink: ['/pages/barrios']
                                     },
                                     {
                                         label: 'Ciudades',
-        
+
                                         routerLink: ['/pages/ciudades']
                                     },
                                     {
                                         label: 'Zonas',
-        
+
                                         routerLink: ['/pages/zonas']
                                     },
                                     {
                                         label: 'Zonas prestamos',
-        
+
                                         routerLink: ['/pages/zonas-prestamos']
                                     },
                                     {
                                         label: 'Tipos de clientes',
-        
+
                                         routerLink: ['/pages/tipos-cliente']
                                     },
                                     {
                                         label: 'Clientes',
-        
-                                        routerLink: ['/auth/access']
+
+                                        routerLink: ['/pages/clientes']
                                     },
                                     {
                                         label: 'Fiadores',
-        
+
                                         routerLink: ['/auth/access']
                                     },
                                     {
                                         label: 'Responsables',
-        
+
                                         routerLink: ['/auth/access']
                                     },
                                     {
                                         label: 'Rutas',
-        
+
                                         routerLink: ['/auth/access']
                                     },
                                     {
                                         label: 'Incosistencias',
-        
+
                                         routerLink: ['/auth/access']
                                     },
                                     {
                                         label: 'Bancos',
-        
+
                                         routerLink: ['/pages/bancos']
                                     },
                                     {
                                         label: 'Check list',
-        
+
                                         routerLink: ['/auth/access']
                                     },
-                                   
+
                                 ]
                             },
 
@@ -113,7 +113,7 @@ export class AppMenuComponent implements OnInit {
 
                                 routerLink: ['/auth/error']
                             },
-                          
+
                         ]
                     },
                 ]

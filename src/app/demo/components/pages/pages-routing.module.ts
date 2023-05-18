@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
         { path: 'zonas', loadChildren: () => import('./zonas/zonas.module').then(m => m.ZonasModule) },
         { path: 'zonas-prestamos', loadChildren: () => import('./zonas-prestamos/zonas-prestamos.module').then(m => m.ZonasPrestamosModule) },
         { path: 'tipos-cliente', loadChildren: () => import('./tipos-clientes/tipos-clientes.module').then(m => m.TiposClientesModule) },
+        { path: 'clientes', loadChildren: () => import('./clientes/clientes.module').then(m => m.ClientesModule) },
         { path: '**', redirectTo: '/notfound' }
     ])],
     exports: [RouterModule]
