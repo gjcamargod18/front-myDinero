@@ -13,6 +13,11 @@ import { RouterModule } from '@angular/router';
         { path: 'zonas-prestamos', loadChildren: () => import('./zonas-prestamos/zonas-prestamos.module').then(m => m.ZonasPrestamosModule) },
         { path: 'tipos-cliente', loadChildren: () => import('./tipos-clientes/tipos-clientes.module').then(m => m.TiposClientesModule) },
         { path: 'clientes', loadChildren: () => import('./clientes/clientes.module').then(m => m.ClientesModule) },
+        { path: 'fiadores', loadChildren: () => import('./fiadores/fiadores.module').then(m => m.FiadoresModule) },
+        { path: 'responsables', loadChildren: () => import('./responsables/responsables.module').then(m => m.ResponsablesModule) },
+        { path: 'rutas', loadChildren: () => import('./rutas/rutas.module').then(m => m.RutasModule) },
+        { path: 'inconsistencias', loadChildren: () => import('./inconsistencias/inconsistencias.module').then(m => m.InconsistenciasModule) },
+        { path: 'check-list', loadChildren: () => import('./check-list/check-list.module').then(m => m.CheckListModule) },
         { path: '**', redirectTo: '/notfound' }
     ])],
     exports: [RouterModule]

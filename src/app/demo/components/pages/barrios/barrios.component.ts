@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { PrimeNGConfig } from 'primeng/api';
-import { TableModule } from 'primeng/table';
+import { Component, OnInit } from '@angular/core';
+
 import { ProductService } from 'src/app/demo/service/product.service';
 import { Product } from 'src/app/demo/api/product';
 import { MessageService } from 'primeng/api';

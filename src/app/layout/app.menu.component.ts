@@ -57,22 +57,22 @@ export class AppMenuComponent implements OnInit {
                                     {
                                         label: 'Fiadores',
 
-                                        routerLink: ['/auth/access']
+                                        routerLink: ['/pages/fiadores']
                                     },
                                     {
                                         label: 'Responsables',
 
-                                        routerLink: ['/auth/access']
+                                        routerLink: ['/pages/responsables']
                                     },
                                     {
                                         label: 'Rutas',
 
-                                        routerLink: ['/auth/access']
+                                        routerLink: ['/pages/rutas']
                                     },
                                     {
-                                        label: 'Incosistencias',
+                                        label: 'Inconsistencias',
 
-                                        routerLink: ['/auth/access']
+                                        routerLink: ['/pages/inconsistencias']
                                     },
                                     {
                                         label: 'Bancos',
@@ -82,7 +82,7 @@ export class AppMenuComponent implements OnInit {
                                     {
                                         label: 'Check list',
 
-                                        routerLink: ['/auth/access']
+                                        routerLink: ['/pages/check-list']
                                     },
 
                                 ]

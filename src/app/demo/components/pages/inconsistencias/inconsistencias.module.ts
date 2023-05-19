@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BarriosRoutingModule } from './barrios-routing.module';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import { FileUploadModule } from 'primeng/fileupload';
@@ -15,12 +14,14 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
+import { InconsistenciasRoutingModule } from './inconsistencias-routing.module';
+
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    BarriosRoutingModule,
+    InconsistenciasRoutingModule,
     TableModule,
     FileUploadModule,
     FormsModule,
@@ -37,4 +38,4 @@ import { InputTextModule } from 'primeng/inputtext';
     DialogModule
   ]
 })
-export class BarriosModule { }
+export class InconsistenciasModule { }

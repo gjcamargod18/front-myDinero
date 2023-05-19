@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BarriosRoutingModule } from './barrios-routing.module';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import { FileUploadModule } from 'primeng/fileupload';
@@ -15,13 +14,14 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
+import { ResponsablesRoutingModule } from './responsables-routing.module';
+
+
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    BarriosRoutingModule,
-    TableModule,
+    CommonModule,TableModule,
     FileUploadModule,
     FormsModule,
     ButtonModule,
@@ -34,7 +34,7 @@ import { InputTextModule } from 'primeng/inputtext';
     DropdownModule,
     RadioButtonModule,
     InputNumberModule,
-    DialogModule
+    DialogModule, ResponsablesRoutingModule
   ]
 })
-export class BarriosModule { }
+export class ResponsablesModule { }

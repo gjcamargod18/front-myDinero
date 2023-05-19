@@ -16,6 +16,7 @@ import { CheckListComponent } from './check-list/check-list.component';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 
+
 @NgModule({
     declarations: [
     BancoComponent,
@@ -29,7 +30,7 @@ import { TableModule } from 'primeng/table';
     ResponsablesComponent,
     RutasComponent,
     InconsistenciasComponent,
-    CheckListComponent
+    CheckListComponent,
   ],
     imports: [
         CommonModule,
