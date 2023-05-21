@@ -18,6 +18,7 @@ import { RouterModule } from '@angular/router';
         { path: 'rutas', loadChildren: () => import('./rutas/rutas.module').then(m => m.RutasModule) },
         { path: 'inconsistencias', loadChildren: () => import('./inconsistencias/inconsistencias.module').then(m => m.InconsistenciasModule) },
         { path: 'check-list', loadChildren: () => import('./check-list/check-list.module').then(m => m.CheckListModule) },
+        { path: 'empleados', loadChildren: () => import('./empleados/empleados.module').then(m => m.EmpleadosModule) },
         { path: '**', redirectTo: '/notfound' }
     ])],
     exports: [RouterModule]

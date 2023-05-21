@@ -4,10 +4,10 @@
               <div class="grid">
                 <div class="col-12">
                         <div class="my-2 mb-3">
-                            <button pButton pRipple label="Agregar" icon="pi pi-plus" class="p-button-success mr-2" (click)="openNew()"></button>
-                            <button pButton pRipple label="Eliminar" icon="pi pi-trash" class="p-button-danger" (click)="deleteSelectedProducts()" [disabled]="!selectedProducts || !selectedProducts.length"></button>
+                            <button pButton pRipple label="Agregar" icon="pi pi-plus" class="p-button-success mr-2" ></button>
+                            <button pButton pRipple label="Eliminar" icon="pi pi-trash" class="p-button-danger"></button>
                         </div>
-                        <p-table #dt [value]="products" [columns]="cols" responsiveLayout="scroll" [rows]="10" [globalFilterFields]="['name','country.name','representative.name','status']" [paginator]="true" [rowsPerPageOptions]="[10,20,30]" [showCurrentPageReport]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [(selection)]="selectedProducts" selectionMode="multiple" [rowHover]="true" dataKey="id">
+                        <p-table #dt [value]="empleados" responsiveLayout="scroll" [rows]="10" [globalFilterFields]="['name','country.name','representative.name','status']" [paginator]="true" [rowsPerPageOptions]="[10,20,30]" [showCurrentPageReport]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"  selectionMode="multiple" [rowHover]="true" dataKey="id">
                             <ng-template pTemplate="caption">
                                 <div class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
                                     <h5 class="m-0">Ciudades</h5>
@@ -23,31 +23,36 @@
                                         <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
                                     </th>
                                     <th pSortableColumn="codigo">Codigo <p-sortIcon field="code"></p-sortIcon></th>
-                                    <th pSortableColumn="descripcion">Descripcion <p-sortIcon field="name"></p-sortIcon></th>
-                                    <th pSortableColumn="comentario">Comentario <p-sortIcon field="price"></p-sortIcon></th>
+                                    <th pSortableColumn="descripcion">Nombres <p-sortIcon field="name"></p-sortIcon></th>
+                                    <th pSortableColumn="comentario">Apellidos <p-sortIcon field="price"></p-sortIcon></th>
+                                    <th pSortableColumn="comentario">Correo <p-sortIcon field="price"></p-sortIcon></th>
                                     <th></th>
                                 </tr>
                             </ng-template>
-                            <ng-template pTemplate="body" let-product>
+                            <ng-template pTemplate="body" let-empleado>
                                 <tr>
                                     <td>
-                                        <p-tableCheckbox [value]="product"></p-tableCheckbox>
+                                        <p-tableCheckbox [value]="empleado"></p-tableCheckbox>
                                     </td>
                                     <td style="width:14%; min-width:10rem;"><span class="p-column-title">Code</span>
-                                        {{product.code || product.id}}
+                                        {{empleado.codigo_empleado}}
                                     </td>
                                     <td style="width:14%; min-width:10rem;">
                                         <span class="p-column-title">Name</span>
-                                        {{product.name}}
+                                        {{empleado.nombre}}
                                     </td>
                                     <td style="width:14%; min-width:10rem;">
                                         <span class="p-column-title">Category</span>
-                                        {{product.category}}
+                                        {{empleado.apellido}}
+                                    </td>
+                                    <td style="width:14%; min-width:10rem;">
+                                        <span class="p-column-title">Category</span>
+                                        {{empleado.email}}
                                     </td>
                                     <td>
                                         <div class="flex">
-                                            <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" (click)="editProduct(product)"></button>
-                                            <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteProduct(product)"></button>
+                                            <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" ></button>
+                                            <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" ></button>
                                         </div>
                                     </td>
                                 </tr>

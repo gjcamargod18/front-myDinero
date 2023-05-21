@@ -15,6 +15,7 @@ import { InconsistenciasComponent } from './inconsistencias/inconsistencias.comp
 import { CheckListComponent } from './check-list/check-list.component';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import { EmpleadosComponent } from './empleados/empleados.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { TableModule } from 'primeng/table';
     RutasComponent,
     InconsistenciasComponent,
     CheckListComponent,
+    EmpleadosComponent,
   ],
     imports: [
         CommonModule,

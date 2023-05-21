@@ -84,6 +84,11 @@ export class AppMenuComponent implements OnInit {
 
                                         routerLink: ['/pages/check-list']
                                     },
+                                    {
+                                        label: 'Empleados',
+
+                                        routerLink: ['/pages/empleados']
+                                    },
 
                                 ]
                             },
