@@ -16,7 +16,9 @@ import { CheckListComponent } from './check-list/check-list.component';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { EmpleadosComponent } from './empleados/empleados.component';
-
+import { BancosCreatesComponent } from './elementos/bancos-creates/bancos-creates.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { BancosListComponent } from './elementos/bancos-list/bancos-list.component';
 
 @NgModule({
     declarations: [
@@ -33,12 +35,16 @@ import { EmpleadosComponent } from './empleados/empleados.component';
     InconsistenciasComponent,
     CheckListComponent,
     EmpleadosComponent,
+    BancosCreatesComponent,
+    BancosListComponent,
+
   ],
     imports: [
         CommonModule,
         PagesRoutingModule,
         ButtonModule,
-        TableModule
+        TableModule,
+        InputTextModule
     ]
 })
 export class PagesModule { }

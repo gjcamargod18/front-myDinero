@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BancoRoutingModule } from './banco-routing.module';
-import { BancoComponent } from './bancos.component';
+
+
 
 @NgModule({
   imports: [
-    CommonModule, 
-    BancoRoutingModule
+    CommonModule,
+    BancoRoutingModule,
+  ],
+  declarations: [
+
   ]
 })
 export class BancoModule { }
